@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_16_015723) do
+ActiveRecord::Schema.define(version: 2022_06_16_042804) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +56,8 @@ ActiveRecord::Schema.define(version: 2022_06_16_015723) do
     t.bigint "customers_id"
     t.bigint "shipments_id"
     t.bigint "products_id"
+    t.date "ship_date"
+    t.float "profit"
     t.index ["customers_id"], name: "index_orders_on_customers_id"
     t.index ["order_priorities_id"], name: "index_orders_on_order_priorities_id"
     t.index ["products_id"], name: "index_orders_on_products_id"
@@ -70,7 +72,6 @@ ActiveRecord::Schema.define(version: 2022_06_16_015723) do
     t.string "name"
     t.float "unit_price"
     t.float "shopping_cost"
-    t.float "profit"
     t.float "product_base_margin"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
