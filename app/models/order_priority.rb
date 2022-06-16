@@ -1,0 +1,2 @@
+class OrderPriority < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class CustomerSegment < ApplicationRecord
+end
